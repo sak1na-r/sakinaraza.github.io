@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Sakina Raza (she/her)</title>
+  <style>
+    /* Global Styles */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #5db9d5;
+      color: #0f1039;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Fixed Left Sidebar */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #144d8b;
+      height: 100%;
+      width: 18vw;
+      box-sizing: border-box;
+      z-index: 10;
+    }
+
+    #sidebar div {
+      padding-top: 8vh;
+      padding-left: 2.5vw;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    #sidebar a {
+      color: #bc6ff2;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
+      transition: opacity 0.2s ease;
+    }
+
+    #sidebar a:hover {
+      text-decoration: underline;
+      opacity: 0.85;
+    }
+
+    /* Main Content Area */
+    .content {
+      width: 75vw;
+      margin: 8vh auto;
+      padding-left: 20vw;
+      box-sizing: border-box;
+    }
+
+    .profile {
+      width: 100%;
+      min-height: 268px;
+      max-width: 1000px;
+    }
+
+    .profile img {
+      width: 26vw;
+      max-width: 300px;
+      border-radius: 15px;
+      float: right;
+      margin-left: 3vw;
+      margin-bottom: 2vw;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .profile h1 {
+      font-size: 2.2em;
+      margin-top: 0;
+      color: #144d8b;
+      border-bottom: 2px solid #35448b;
+      padding-bottom: 8px;
+    }
+
+    .profile h2 {
+      font-size: 1.3em;
+      color: #144d8b;
+      margin-top: 1.5em;
+      margin-bottom: 0.4em;
+    }
+
+    .profile p {
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+
+    .profile a {
+      color: #3e7fc5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .profile a:hover {
+      text-decoration: underline;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .tag {
+      background-color: #24a087;
+      color: #144d8b;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      font-weight: 500;
+    }
+
+    /* Clearfix for floated image */
+    .profile::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 850px) {
+      #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      #sidebar div {
+        padding: 20px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .content {
+        width: 90vw;
+        padding-left: 0;
+        margin: 4vh auto;
+      }
+      .profile img {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <div id="sidebar">
+    <div>
+      <a href="https://www.instagram.com/sak1na_raza/" target="_blank">Instagram</a>
+      <a href="https://github.com/sak1na-r" target="_blank">GitHub</a>
+      <a href="https://www.facebook.com/profile.php?id=61550801672755" target="_blank">Facebook</a>
+      <a href="https://www.pakpaniwells.org/" target="_blank">Pak Pani Wells</a>
+      <a href="https://salaam-as-stuy.my.canva.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeY0U6yWQqDJdBW-n_gIph3XEwhRyhO3QpMOFmwaNWOqONfb5G-wuj9NQZfag_aem_UZX5l8OxMtoQirWhdEJ9aw" target="_blank">Salaam-As-Stuy</a>
+      <a href="mailto:sakina.raza2009@gmail.com">Email Me</a>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <div class="content">
+    <div class="profile">
+      <!-- Profile Picture loaded from the local images folder -->
+      <img src="images/profile.jpg" alt="Sakina Raza Profile Photo">
+      
+      <!-- Bio Header -->
+      <div>
+        <h1>Sakina Raza (she/her)</h1>
+        <p>
+          <a href="mailto:sakina.raza2009@gmail.com">sakina.raza2009@gmail.com</a>
+        </p>
+        <p>
+            Senior at <a href="https://stuy.enschool.org/" target="_blank">Stuyvesant High School</a> in New York.
+        </p>
+
+        <!-- Research -->
+        <h2>Research</h2>
+        <p>
+          First author conducting environmental engineering research alongside a PhD mentor from Carnegie Mellon University. My work focuses on computational modeling and novel photothermal evaporator systems for solar-driven water purification to tackle global water scarcity.
+        </p>
+
+        <!-- Work & Internship -->
+        <h2>Work & Experience</h2>
+        <p>
+          Project Management Intern with the NYC Department of Education (DIIT). Facilitated technical communication between developers and stakeholders through the SDLC for the IHMS web application.
+        </p>
+
+        <!-- MSA & Leadership -->
+        <h2>MSA & Leadership</h2>
+        <p>
+          Vice President of Stuyvesant MSA and co-leader of the MIST team. Created the official <a href="https://salaam-as-stuy.my.canva.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeY0U6yWQqDJdBW-n_gIph3XEwhRyhO3QpMOFmwaNWOqONfb5G-wuj9NQZfag_aem_UZX5l8OxMtoQirWhdEJ9aw" target="_blank">Salaam-As-Stuy website</a>, co-led our team to a historic 4x consecutive 1st-place regional championship, and organized community events and charity drives.
+        </p>
+
+        <!-- Nonprofit & Volunteer Work -->
+        <h2>Nonprofit & Volunteering</h2>
+        <p>
+          Co-founder and Lead Web Developer of <a href="https://www.pakpaniwells.org/" target="_blank">Pak Pani Wells</a>, a registered 501(c)(3) raising $5,000+ for global water wells. Conducted endowment investment analysis with The Zahra Trust and tutored CAD through ARISTA Honor Society.
+        </p>
+
+        <!-- Personal Interests -->
+        <h2>Interests</h2>
+        <p>
+          4 year Varsity Basketball athlete and 2026 <a href="https://www.getmistified.com/" target="_blank">MIST</a> National Champion, as well as 3x <a href="https://mistny.org/" target="_blank">MIST</a> NY Champion.
+        </p>
+        <p>
+          I am also a very passionate advocate for sustainable engineering solutions, and I strive to use my research and experiences with robotics and advocacy to make milestones towards global water accessibility.
+        </p>
+        
+        <!-- Focus Tags -->
+        <div class="tag-list">
+          <span class="tag">Water Purification</span>
+          <span class="tag">Project Management</span>
+          <span class="tag">Nonprofit Co-Founder</span>
+          <span class="tag">Varsity Basketball</span>
+          <span class="tag">Robotics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

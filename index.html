@@ -31,30 +31,59 @@
     }
 
     #sidebar div {
-      padding-top: 8vh;
+      padding-top: 6vh;
       padding-left: 2.5vw;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
-    #sidebar a {
+    #sidebar a, #sidebar summary {
       color: #bc6ff2;
       text-decoration: none;
       font-weight: 600;
       font-size: 1em;
       transition: opacity 0.2s ease;
+      cursor: pointer;
     }
 
-    #sidebar a:hover {
+    #sidebar a:hover, #sidebar summary:hover {
       text-decoration: underline;
       opacity: 0.85;
+    }
+
+    /* Tight details and dropdown styling */
+    #sidebar details {
+      margin: 0;
+      padding: 0;
+    }
+
+    #sidebar summary {
+      list-style: none;
+    }
+
+    #sidebar details[open] summary {
+      text-decoration: underline;
+      margin-bottom: 4px;
+    }
+
+    #sidebar .dropdown-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-left: 12px;
+      margin: 0;
+    }
+
+    #sidebar .dropdown-content a {
+      font-size: 0.9em;
+      color: #9cd8ef;
     }
 
     /* Main Content Area */
     .content {
       width: 75vw;
-      margin: 8vh auto;
+      margin: 6vh auto;
       padding-left: 20vw;
       box-sizing: border-box;
     }
@@ -67,7 +96,7 @@
 
     .profile img {
       width: 26vw;
-      max-width: 300px;
+      max-width: 280px;
       border-radius: 15px;
       float: right;
       margin-left: 3vw;
@@ -110,6 +139,7 @@
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 15px;
+      margin-bottom: 20px;
     }
 
     .tag {
@@ -121,7 +151,6 @@
       font-weight: 500;
     }
 
-    /* Clearfix for floated image */
     .profile::after {
       content: "";
       clear: both;
@@ -164,8 +193,25 @@
       <a href="https://www.instagram.com/sak1na_raza/" target="_blank">Instagram</a>
       <a href="https://github.com/sak1na-r" target="_blank">GitHub</a>
       <a href="https://www.facebook.com/profile.php?id=61550801672755" target="_blank">Facebook</a>
-      <a href="https://www.pakpaniwells.org/" target="_blank">Pak Pani Wells</a>
-      <a href="https://salaam-as-stuy.my.canva.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeY0U6yWQqDJdBW-n_gIph3XEwhRyhO3QpMOFmwaNWOqONfb5G-wuj9NQZfag_aem_UZX5l8OxMtoQirWhdEJ9aw" target="_blank">Salaam-As-Stuy</a>
+      
+      <!-- Pak Pani Wells Dropdown -->
+      <details>
+        <summary>Pak Pani Wells</summary>
+        <div class="dropdown-content">
+          <a href="https://www.pakpaniwells.org/" target="_blank">Website</a>
+          <a href="https://www.instagram.com/pakpaniwells/" target="_blank">Instagram</a>
+        </div>
+      </details>
+
+      <!-- Stuyvesant Muslim Students Association / Salaam-As-Stuy Dropdown -->
+      <details>
+        <summary>Stuyvesant MSA</summary>
+        <div class="dropdown-content">
+          <a href="https://salaam-as-stuy.my.canva.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeY0U6yWQqDJdBW-n_gIph3XEwhRyhO3QpMOFmwaNWOqONfb5G-wuj9NQZfag_aem_UZX5l8OxMtoQirWhdEJ9aw" target="_blank">Salaam-As-Stuy</a>
+          <a href="https://www.instagram.com/stuymsa/" target="_blank">Instagram (@stuymsa)</a>
+        </div>
+      </details>
+
       <a href="mailto:sakina.raza2009@gmail.com">Email Me</a>
     </div>
   </div>
@@ -173,45 +219,18 @@
   <!-- Main Content Container -->
   <div class="content">
     <div class="profile">
-      <!-- Profile Picture loaded from the local images folder -->
+      <!-- Profile Picture -->
       <img src="images/profile.jpg" alt="Sakina Raza Profile Photo">
       
       <!-- Bio Header -->
       <div>
         <h1>Sakina Raza (she/her)</h1>
         <p>
-          <a href="mailto:sakina.raza2009@gmail.com">sakina.raza2009@gmail.com</a>
-        </p>
-        <p>
-            Senior at <a href="https://stuy.enschool.org/" target="_blank">Stuyvesant High School</a> in New York.
+          <a href="mailto:sakina.raza2009@gmail.com">sakina.raza2009@gmail.com</a> | Senior at <a href="https://stuy.enschool.org/" target="_blank">Stuyvesant High School</a>, New York, NY
         </p>
 
-        <!-- Research -->
-        <h2>Research</h2>
-        <p>
-          First author conducting environmental engineering research alongside a PhD mentor from Carnegie Mellon University. My work focuses on computational modeling and novel photothermal evaporator systems for solar-driven water purification to tackle global water scarcity.
-        </p>
-
-        <!-- Work & Internship -->
-        <h2>Work & Experience</h2>
-        <p>
-          Project Management Intern with the NYC Department of Education (DIIT). Facilitated technical communication between developers and stakeholders through the SDLC for the IHMS web application.
-        </p>
-
-        <!-- MSA & Leadership -->
-        <h2>MSA & Leadership</h2>
-        <p>
-          Vice President of Stuyvesant MSA and co-leader of the MIST team. Created the official <a href="https://salaam-as-stuy.my.canva.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeY0U6yWQqDJdBW-n_gIph3XEwhRyhO3QpMOFmwaNWOqONfb5G-wuj9NQZfag_aem_UZX5l8OxMtoQirWhdEJ9aw" target="_blank">Salaam-As-Stuy website</a>, co-led our team to a historic 4x consecutive 1st-place regional championship, and organized community events and charity drives.
-        </p>
-
-        <!-- Nonprofit & Volunteer Work -->
-        <h2>Nonprofit & Volunteering</h2>
-        <p>
-          Co-founder and Lead Web Developer of <a href="https://www.pakpaniwells.org/" target="_blank">Pak Pani Wells</a>, a registered 501(c)(3) raising $5,000+ for global water wells. Conducted endowment investment analysis with The Zahra Trust and tutored CAD through ARISTA Honor Society.
-        </p>
-
-        <!-- Personal Interests -->
-        <h2>Interests</h2>
+        <!-- 1. Aspirations & Interests (Top) -->
+        <h2>Aspirations & Interests</h2>
         <p>
           4 year Varsity Basketball athlete and 2026 <a href="https://www.getmistified.com/" target="_blank">MIST</a> National Champion, as well as 3x <a href="https://mistny.org/" target="_blank">MIST</a> NY Champion.
         </p>
@@ -222,11 +241,99 @@
         <!-- Focus Tags -->
         <div class="tag-list">
           <span class="tag">Water Purification</span>
+          <span class="tag">Environmental Engineering</span>
           <span class="tag">Project Management</span>
           <span class="tag">Nonprofit Co-Founder</span>
-          <span class="tag">Varsity Basketball</span>
-          <span class="tag">Robotics</span>
+          <span class="tag">MIST NY Ambassador</span>
+          <span class="tag">Varsity Basketball Captain</span>
+          <span class="tag">Robotics & CAD</span>
         </div>
+
+        <!-- 2. Research -->
+        <h2>Research</h2>
+        <p>
+          <strong>National High School Journal of Science — Lead Student Researcher & First Author</strong><br>
+          Primary research, as first author, conducted alongside a PhD mentor from Carnegie Mellon University modeling robotic photothermal evaporators for solar-driven water purification. Invited for revision by the <em>National High School Journal of Science</em> for lead publication.
+        </p>
+        <p>
+          This computational study models and simulates light-to-vapor conversion across three distinct material architectures (copper sulfide plasmonic membranes, wood-polypyrrole composites, and light-propelled photocatalytic robotic evaporators) to address non-standardized reporting in solar desalination.
+        </p>
+        <p>
+          Utilizing Python (NumPy) for spectral irradiance and material absorbance modeling, alongside ImageJ for microstructural pore-geometry analysis, the study investigates the relationship between optical energy conversion and volumetric evaporation coefficients. Findings demonstrate that photothermal efficiency and evaporation coefficients operate as physically decoupled parameters (R<sup>2</sup> = 0.01), proving that photothermal efficiency alone is a statistically insignificant predictor of overall vapor generation performance.
+        </p>
+
+        <!-- 3. Work & Experience -->
+        <h2>Work & Experience</h2>
+        <p>
+          <strong>NYC Department of Education (DIIT) — Project Management Intern</strong><br>
+          Liaised between software developers and non-technical stakeholders across the full Software Development Life Cycle (SDLC) for the Integrated Health Management System (IHMS) web application.
+        </p>
+        <p>
+          Gathered technical requirements, tracked development milestones, documented detailed user stories, and conducted user acceptance testing (UAT) verification to align complex technical systems with operational needs across NYC public schools.
+        </p>
+
+        <!-- 4. MSA & Leadership -->
+        <h2>MSA & Student Leadership</h2>
+        <p>
+          <strong>Stuyvesant Muslim Students Association — Vice President & MIST NY Team Ambassador</strong><br>
+          Direct organizational governance, digital communications, and event logistics for a 120+ member organization, leading 30+ major events, co-founding a Sierra Leone aid drive, and raising funds for Global Charity Week. Created and maintain the official <a href="https://salaam-as-stuy.my.canva.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeY0U6yWQqDJdBW-n_gIph3XEwhRyhO3QpMOFmwaNWOqONfb5G-wuj9NQZfag_aem_UZX5l8OxMtoQirWhdEJ9aw" target="_blank">Salaam-As-Stuy website</a>.
+        </p>
+        <p>
+          During my junior year (2025–2026), I served as the Social Media Manager for the official <a href="https://www.instagram.com/stuymsa/" target="_blank">@stuymsa Instagram account</a>, expanding our online audience to 760+ followers and generating over 1 million total views. In this role, I produced engaging promos, reels, and launched four ongoing educational content series covering core Islamic topics. Additionally, I designed posts to spread vital awareness regarding current global events in Islamic countries as well as within Muslim communities across the United States.
+        </p>
+        <p>
+          Also during my junior year, I served as the MIST Social Media Captain, leading our team to a 2nd-Place finish in the regional social media competition and competing nationally in partnership with Townsend Harris High School. As MIST NY Team Ambassador, I represented Stuyvesant across a regional tournament of 1,000+ entrants, co-leading our team to a historic 4x consecutive 1st-Place NY Regional Championship and the 2026 MIST National Championship title, while earning individual honors as MIST MVP and Team Captain.
+        </p>
+        <p>
+          <strong>Stuyvesant Student Union & Junior Caucus — Socials & Outreach Cabinet Member</strong><br>
+          Served on the Socials Department and Outreach Cabinet for the Stuyvesant Student Union, producing digital campaigns, promos, and media content reaching a student body of over 3,300+ students. 
+        </p>
+        <p>
+          As an official Cabinet Member for the Junior Caucus, representing over 820+ students, I spearheaded outreach, promotional strategies, and event media campaigns, including directing the official promotions for Junior Prom.
+        </p>
+
+        <!-- 5. Nonprofit & Impact Initiatives -->
+        <h2>Nonprofit & Impact Initiatives</h2>
+        <p>
+          <strong>Pak Pani Wells — Co-Founder, Lead Web Developer, & Media Manager</strong><br>
+          Co-founded and lead digital infrastructure for <a href="https://www.pakpaniwells.org/" target="_blank">Pak Pani Wells</a>, a registered 501(c)(3) nonprofit dedicated to clean water access in underserved communities, raising over $5,000 to construct sustainable water wells globally.
+        </p>
+        <p>
+          Designed, built, and maintain the public website and social media channels, publishing 22+ articles and blog posts while growing reach to 670+ followers with 200,000+ views (including a 111k+ viral reel).
+        </p>
+
+        <!-- 6. Service & Community Engagement -->
+        <h2>Service & Community Engagement</h2>
+        <p>
+          <strong>The Zahra Trust — Endowment Portfolio & Financial Strategy Student Analyst</strong><br>
+          Shadowed the Investment Director at <a href="https://zahratrust.org/" target="_blank">The Zahra Trust</a> to evaluate endowment fund investments, analyze new financial opportunities, and present quarterly performance reports. Designed executive presentation slides and analytical materials used directly in investment committee meetings.
+        </p>
+        <p>
+          Immersed in The Zahra Trust’s vast global humanitarian footprint—which reaches millions of individuals across the globe, providing over 13.3 million meals, 301,731 clean water access provisions, and extensive medical aid worldwide—I witnessed firsthand how large-scale strategic funding transforms vulnerable communities. I aspire to leverage the financial, strategic, and analytical frameworks learned during this role to drive tangible global impact, channeling these insights toward funding and scaling sustainable engineering solutions to tackle critical international resource crises like global water scarcity.
+        </p>
+        <p>
+          <strong>ARISTA National Honor Society — Member, Math & CAD Tutor</strong><br>
+          Inducted into <a href="https://www.stuyarista.org/" target="_blank">Stuyvesant ARISTA</a> as a 10th grader, accumulating 200+ service hours. Provide dedicated peer tutoring for middle school students in mathematics, Onshape CAD, and core STEM fundamentals, while volunteering and supporting regional middle school math competitions and educational events.
+        </p>
+        <p>
+          Additionally, serve weekly at the 9 Million Reasons Food Pantry supporting food distribution logistics in NYC, assist Red Cross guidance monitors, and actively support community outreach efforts including the NDSS Buddy Walk.
+        </p>
+
+        <!-- 7. Honors & Academic Awards -->
+        <h2>Honors & Academic Awards</h2>
+        <p>
+          <strong>National AP Scholar & AP Scholar with Distinction</strong><br>
+          Recognized for exceptional academic performance across high-level Advanced Placement coursework.
+        </p>
+        <p>
+          <strong>National Spanish Exam Gold Medalist & Perfect Score</strong><br>
+          Achieved a perfect score on the National Spanish Examination (Level II), placing within the top 201 participants out of 82,900+ students nationwide.
+        </p>
+        <p>
+          <strong>College Board National Recognition Program Award</strong><br>
+          Honored for academic excellence and outstanding standardized examination performance.
+        </p>
+
       </div>
     </div>
   </div>
